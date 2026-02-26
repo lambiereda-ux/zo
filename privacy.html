@@ -1,120 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - OTHMANE FATI CAR</title>
-    <style>
-        :root {
-            --bg: #f6f1e8;
-            --ink: #1c1a17;
-            --muted: #6d6155;
-            --primary: #1f4d45;
-            --accent: #c76a3b;
-            --card: #fffdfa;
-            --line: #e3d6c6;
-        }
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: var(--bg);
-            color: var(--ink);
-            padding: 22px;
-            line-height: 1.7;
-        }
-        .card {
-            max-width: 920px;
-            margin: 0 auto;
-            background: var(--card);
-            padding: 26px;
-            border-radius: 24px;
-            border: 1px solid var(--line);
-            box-shadow: 0 16px 36px rgba(28, 26, 23, 0.08);
-        }
-        .tag {
-            display: inline-block;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            color: #fff;
-            padding: 6px 12px;
-            border-radius: 999px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-            margin-bottom: 14px;
-        }
-        h1 {
-            margin: 0 0 6px 0;
-            font-size: 28px;
-        }
-        h2 {
-            margin-top: 20px;
-            margin-bottom: 6px;
-            color: var(--primary);
-            font-size: 18px;
-        }
-        p, li {
-            margin: 8px 0;
-        }
-        .meta {
-            color: var(--muted);
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
-        .details {
-            background: #f9f1e7;
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 14px 16px;
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - OTHMANE FATI CAR</title>
+  <meta name="color-scheme" content="light" />
+  <style>
+    :root{
+      --bg: #f6f1e8;
+      --ink: #1c1a17;
+      --muted: #6d6155;
+      --primary: #1f4d45;
+      --accent: #c76a3b;
+      --card: #fffdfa;
+      --line: #e3d6c6;
+      --soft: rgba(28, 26, 23, 0.08);
+      --soft2: rgba(28, 26, 23, 0.06);
+      --radius: 22px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+
+    body{
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(31,77,69,.14), transparent 55%),
+        radial-gradient(700px 420px at 100% 0%, rgba(199,106,59,.16), transparent 55%),
+        linear-gradient(180deg, #fbf6ee, var(--bg));
+      color: var(--ink);
+      line-height: 1.75;
+      padding: 26px 16px 40px;
+    }
+
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .hero{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(31,77,69,1), rgba(199,106,59,1));
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: .3px;
+      font-size: 12px;
+      box-shadow: 0 16px 34px rgba(31,77,69,.22);
+      user-select: none;
+      white-space: nowrap;
+    }
+    .badge .dot{
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,.9);
+      box-shadow: 0 0 0 3px rgba(255,255,255,.18);
+    }
+
+    .topmeta{
+      display: grid;
+      gap: 6px;
+    }
+
+    h1{
+      margin: 0;
+      font-size: clamp(26px, 3vw, 34px);
+      letter-spacing: -.4px;
+      line-height: 1.15;
+    }
+
+    .subtitle{
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 18px 46px var(--soft);
+      overflow: hidden;
+    }
+
+    .cardHeader{
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(249,241,231,.9), rgba(255,253,250,1));
+    }
+
+    .pillRow{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.7);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .pill strong{ color: var(--ink); font-weight: 700; }
+
+    .content{
+      padding: 10px 20px 22px;
+    }
+
+    .notice{
+      margin: 14px 0 18px;
+      padding: 14px 14px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #f9f1e7;
+      box-shadow: 0 10px 24px var(--soft2);
+      color: var(--ink);
+      font-size: 14px;
+    }
+    .notice b{ color: var(--primary); }
+
+    .toc{
+      margin: 16px 0 18px;
+      padding: 14px 14px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.65);
+    }
+    .tocTitle{
+      margin: 0 0 10px;
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .9px;
+      font-weight: 800;
+    }
+    .tocGrid{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 14px;
+    }
+    .toc a{
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 650;
+      font-size: 13px;
+      padding: 6px 8px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+    }
+    .toc a:hover{
+      border-color: var(--line);
+      background: rgba(249,241,231,.7);
+    }
+    @media (max-width: 700px){
+      .hero{ flex-direction: column; }
+      .tocGrid{ grid-template-columns: 1fr; }
+    }
+
+    section{
+      padding: 10px 0 0;
+      scroll-margin-top: 18px;
+    }
+
+    h2{
+      margin: 18px 0 8px;
+      color: var(--primary);
+      font-size: 18px;
+      letter-spacing: -.2px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .num{
+      width: 28px;
+      height: 28px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 10px;
+      background: rgba(31,77,69,.10);
+      border: 1px solid rgba(31,77,69,.18);
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 13px;
+      flex: 0 0 auto;
+    }
+
+    p{ margin: 10px 0; }
+
+    ul{
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+    li{ margin: 7px 0; }
+
+    .grid2{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+    @media (max-width: 800px){
+      .grid2{ grid-template-columns: 1fr; }
+    }
+
+    .box{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 14px;
+      background: rgba(255,255,255,.75);
+    }
+    .boxTitle{
+      margin: 0 0 6px;
+      font-weight: 800;
+      color: var(--ink);
+      font-size: 13px;
+      letter-spacing: .2px;
+    }
+    .box small{ color: var(--muted); font-size: 13px; }
+
+    .details{
+      margin-top: 10px;
+      background: #f9f1e7;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .details .row{
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 14px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .details .row div:first-child{
+      color: var(--muted);
+      font-weight: 700;
+    }
+    @media (max-width: 520px){
+      .details .row{ grid-template-columns: 1fr; }
+    }
+
+    .footer{
+      padding: 14px 20px 18px;
+      border-top: 1px solid var(--line);
+      background: rgba(249,241,231,.85);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer small{
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .backTop{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 750;
+      font-size: 13px;
+      padding: 9px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.7);
+    }
+    .backTop:hover{ background: rgba(255,255,255,.95); }
+  </style>
 </head>
+
 <body>
-<div class="card">
-    <div class="tag">Privacy Policy</div>
-    <h1>Privacy Policy</h1>
-    <div class="meta">App: OTHMANE FATI CAR (package name: com.othmanefati.car)</div>
-
-    <p>This Privacy Policy explains how OTHMANE FATI CAR handles information when you use the OTHMANE FATI CAR Android application.</p>
-
-    <h2>1. Data collection and use</h2>
-    <p>We do not collect, store, or share personal data through the app.</p>
-    <ul>
-        <li>No account creation or login is required.</li>
-        <li>No name, email, phone number, photos, contacts, files, or payment data is collected in-app.</li>
-        <li>No analytics SDK and no advertising SDK are integrated in the app.</li>
-    </ul>
-
-    <h2>2. Device permissions</h2>
-    <p>The app does not request sensitive Android runtime permissions such as location, camera, microphone, contacts, SMS, or storage access.</p>
-    <p>The app manifest does not declare the Android INTERNET permission.</p>
-
-    <h2>3. Third-party services and map links</h2>
-    <p>The app can open external map applications when you tap map-related buttons. Any information processed at that point is handled by the external map provider under its own privacy policy, not by OTHMANE FATI CAR.</p>
-
-    <h2>4. Data retention and deletion</h2>
-    <p>Because we do not collect personal data in-app, we do not retain personal data from app usage and there is no in-app account data to delete.</p>
-
-    <h2>5. Children</h2>
-    <p>The app is not directed to children under 13, and we do not knowingly collect personal data from children.</p>
-
-    <h2>6. Changes to this policy</h2>
-    <p>We may update this Privacy Policy when needed. Any update will be published on this page with a revised effective date.</p>
-
-    <h2>7. Contact</h2>
-    <p>If you have questions about this Privacy Policy, contact us:</p>
-    <div class="details">
-        <strong>OTHMANE FATI CAR</strong><br>
-        REZ DE CHAUSSEE MAGASIN 315<br>
-        IMMEUBLE ISMAILIA, LOTISSEMENT RIAD I<br>
-        MEKNES 50030<br>
-        D-U-N-S number: 367350445<br>
-        Phone: +212 6 26 60 44 11<br>
-        Email: contact@othmanefaticar.org
+  <div class="wrap" id="top">
+    <div class="hero">
+      <div class="topmeta">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">
+          This page explains how <strong>OTHMANE FATI CAR</strong> handles information in the Android app
+          <strong>com.othmanefati.car</strong>.
+        </p>
+      </div>
+      <div class="badge" aria-label="Privacy Policy badge">
+        <span class="dot" aria-hidden="true"></span>
+        Privacy Policy
+      </div>
     </div>
 
-    <h2>8. Effective date</h2>
-    <p>February 21, 2026</p>
-</div>
+    <div class="card">
+      <div class="cardHeader">
+        <div class="pillRow">
+          <div class="pill"><strong>App</strong>: OTHMANE FATI CAR</div>
+          <div class="pill"><strong>Package</strong>: com.othmanefati.car</div>
+          <div class="pill"><strong>Effective</strong>: February 26, 2026</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="notice">
+          <b>Summary:</b> This app is designed to work offline. It stores some information locally on your device to provide features.
+          It does not require an account and does not include advertising or analytics SDKs.
+        </div>
+
+        <nav class="toc" aria-label="Table of contents">
+          <p class="tocTitle">Contents</p>
+          <div class="tocGrid">
+            <a href="#s1">1. Local data stored on your device</a>
+            <a href="#s2">2. Data the app does not collect</a>
+            <a href="#s3">3. External actions you trigger</a>
+            <a href="#s4">4. Permissions and network</a>
+            <a href="#s5">5. Clipboard use</a>
+            <a href="#s6">6. Backup, retention, and deletion</a>
+            <a href="#s7">7. Children</a>
+            <a href="#s8">8. Changes to this policy</a>
+            <a href="#s9">9. Contact</a>
+            <a href="#s10">10. Effective date</a>
+          </div>
+        </nav>
+
+        <section id="s1">
+          <h2><span class="num">1</span>Local data stored on your device</h2>
+          <p>The app stores some information <strong>locally</strong> in Android SharedPreferences so features work offline, such as:</p>
+          <ul>
+            <li>Rental planner draft: selected car and number of days.</li>
+            <li>Booking history: date/time, selected car, days, and estimated total.</li>
+            <li>Favorites: saved car names.</li>
+            <li>Checklist: your preparation checkboxes.</li>
+            <li>Local notes: text notes you add in the customer notes screen.</li>
+          </ul>
+          <p>No account is required and no in-app payment is processed.</p>
+        </section>
+
+        <section id="s2">
+          <h2><span class="num">2</span>Data the app does not collect</h2>
+          <div class="grid2">
+            <div class="box">
+              <p class="boxTitle">No account or login</p>
+              <small>The app does not request sign-in and does not collect account credentials.</small>
+            </div>
+            <div class="box">
+              <p class="boxTitle">No built-in tracking</p>
+              <small>No built-in analytics SDK, advertising SDK, or background tracking.</small>
+            </div>
+          </div>
+        </section>
+
+        <section id="s3">
+          <h2><span class="num">3</span>External actions you trigger</h2>
+          <p>
+            When you tap certain buttons, the app may open other apps (if installed), for example phone dialer, email app,
+            maps, WhatsApp, SMS, or the share sheet.
+          </p>
+          <p>Those actions may include information you choose to send, such as:</p>
+          <ul>
+            <li>Company contact details (phone, email, address).</li>
+            <li>Booking request text (selected car, days, estimated total).</li>
+          </ul>
+          <p>After the handoff, the external app’s own privacy policy applies.</p>
+        </section>
+
+        <section id="s4">
+          <h2><span class="num">4</span>Permissions and network</h2>
+          <ul>
+            <li>
+              The app does not request sensitive runtime permissions such as location, camera, microphone, contacts,
+              SMS read/send permission, or storage permission.
+            </li>
+            <li>The app manifest does not request <strong>INTERNET</strong> permission.</li>
+            <li>The in-app policy WebView loads only a local file and blocks network loads.</li>
+          </ul>
+          <div class="notice" style="margin-top:14px;">
+            <b>Important:</b> The statements above must match the app’s actual AndroidManifest and code. If the app behavior changes,
+            this policy should be updated accordingly.
+          </div>
+        </section>
+
+        <section id="s5">
+          <h2><span class="num">5</span>Clipboard use</h2>
+          <p>If you tap “Copy address” or “Copy phone”, the selected text is placed in your device clipboard.</p>
+          <p style="color:var(--muted); font-size: 14px;">
+            Note: Clipboard content may be visible to other apps on your device. Avoid copying sensitive information.
+          </p>
+        </section>
+
+        <section id="s6">
+          <h2><span class="num">6</span>Backup, retention, and deletion</h2>
+          <p>Data is stored locally on your device. Android backup is disabled for this app.</p>
+          <p>You can remove local data by:</p>
+          <ul>
+            <li>Using in-app clear actions (for favorites and booking history), and</li>
+            <li>Clearing app data or uninstalling the app.</li>
+          </ul>
+        </section>
+
+        <section id="s7">
+          <h2><span class="num">7</span>Children</h2>
+          <p>This app is intended for a general audience and is not directed to children.</p>
+        </section>
+
+        <section id="s8">
+          <h2><span class="num">8</span>Changes to this policy</h2>
+          <p>We may update this page if app behavior changes.</p>
+        </section>
+
+        <section id="s9">
+          <h2><span class="num">9</span>Contact</h2>
+          <p>If you have questions about this Privacy Policy, contact us:</p>
+
+          <div class="details">
+            <strong>OTHMANE FATI CAR</strong><br />
+            REZ DE CHAUSSEE MAGASIN 315<br />
+            IMMEUBLE ISMAILIA, LOTISSEMENT RIAD I<br />
+            MEKNES 50030
+
+            <div class="row">
+              <div>D-U-N-S</div>
+              <div>367350445</div>
+
+              <div>Phone</div>
+              <div>+212 6 26 60 44 11</div>
+
+              <div>Email</div>
+              <div>contact@othmanefaticar.org</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="s10">
+          <h2><span class="num">10</span>Effective date</h2>
+          <p>February 26, 2026</p>
+        </section>
+      </div>
+
+      <div class="footer">
+        <small>© <span id="year"></span> OTHMANE FATI CAR. All rights reserved.</small>
+        <a class="backTop" href="#top" aria-label="Back to top">↑ Back to top</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tiny helper: keeps the footer year current without changing policy content.
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
